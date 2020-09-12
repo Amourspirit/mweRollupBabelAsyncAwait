@@ -1,24 +1,31 @@
 {
   "name": "mwe-rollup-babel-async-await",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
   "main": "index.js",
+  "description": "Minimal Working Example for Rollup + Babel with async/await",
+  "homepage": "https://github.com/Amourspirit/mweRollupBabelAsyncAwait.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Amourspirit/mweRollupBabelAsyncAwait.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/http-server -p 8080",
+    "build": "rm -rf dist && npx rollup -c"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "rollup": "^1.19.4",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.2",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "@babel/core": "^7.11.6",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@babel/preset-env": "^7.11.5",
+    "rollup": "^2.26.11"
   },
   "dependencies": {
-    "core-js": "^3.2.1",
-    "http-server": "^0.11.1",
-    "regenerator-runtime": "^0.13.3"
+    "core-js": "^3.6.5",
+    "http-server": "^0.12.3",
+    "regenerator-runtime": "^0.13.7"
   }
 }

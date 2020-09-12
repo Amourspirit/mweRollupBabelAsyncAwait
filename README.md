@@ -11,24 +11,25 @@ and [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-re
 needed, but also
 [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs).
 
-There is still an issue, where babel helpers are not transpiled. Therefore the polyfill for Promise is not included automatically. To workaround this, a dummy call to `Promise.resolve()` is made in the [head of the source](./src/BuildTest.js).
+The issue, where babel helpers are not transpiled. The polyfill for Promise is **now** included automatically.
+There so not need tu ust the orkaround as follow: `Promise.resolve()` in the [head of the source](./src/BuildTest.js).
 
-Once the dummy call and all these plugins are included and called in [rollup.config.js](./rollup.config.js) everything is transpiled as expected.
+Once all these plugins are included and called in [rollup.config.js](./rollup.config.js) everything is transpiled as expected.
 
 ## Steps to test/run
 
 ```sh
 # clone
-$ git clone https://github.com/htho/mweRollupBabelAsyncAwait.git
+$ git clone https://github.com/Amourspirit/mweRollupBabelAsyncAwait.git
 
 # install
 $ npm i
 
 # bundle
-$ ./node_modules/.bin/rollup -c
+$ npm run build
 
 # start a server
-$ ./node_modules/.bin/http-server -p 8080
+$ npm start
 
 # visit http://localhost:8080/BuildTest.html
 # check if "Hi from top level!" and "Hi from the async function!" is printed to your console.

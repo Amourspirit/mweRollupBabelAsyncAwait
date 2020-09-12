@@ -1,4 +1,4 @@
-// Promise.resolve(); // dummy call
+Promise.resolve(); // dummy call
 
 console.log("Hi from top level!");
 (async function(params) {

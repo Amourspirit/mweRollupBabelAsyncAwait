@@ -1,6 +1,6 @@
 {
   "name": "mwe-rollup-babel-async-await",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "description": "Minimal Working Example for Rollup + Babel with async/await",
   "homepage": "https://github.com/Amourspirit/mweRollupBabelAsyncAwait.git",

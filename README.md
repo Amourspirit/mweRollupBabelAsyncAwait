@@ -6,10 +6,10 @@ This repository was/is necessary because it is [not so easy](https://github.com/
 
 ## How does it work
 
-Not only is [rollup-plugin-babel](https://github.com/rollup/rollup-plugin-babel)
-and [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve)
+Not only is [rollup-plugin-babel](https://github.com/rollup/plugins)
+and [rollup-plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve)
 needed, but also
-[rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs).
+[rollup-plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs).
 
 There is still an issue, where babel helpers are not transpiled.  
 Therefore the polyfill for Promise is not included automatically.  
@@ -32,6 +32,6 @@ $ npm run build
 # start a server
 $ npm start
 
-# visit http://localhost:8080/BuildTest.html
+# visit http://localhost:8080/index.html
 # check if "Hi from top level!" and "Hi from the async function!" is printed to your console.
 ```
